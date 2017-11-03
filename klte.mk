@@ -118,7 +118,6 @@ PRODUCT_PACKAGES += \
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
     $(LOCAL_PATH)/keylayout/sec_touchkey.kl:system/usr/keylayout/sec_touchkey.kl
 
 # Lights
@@ -176,10 +175,12 @@ PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
 
 # Radio
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     libsecnativefeature \
     libsecril-client-sap \
-    libsecril-client
+    libsecril-client \
+    android.hardware.radio.deprecated@1.0 \
+    android.hardware.radio@1.0
 
 # Ramdisk
 PRODUCT_PACKAGES += \
